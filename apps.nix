@@ -7,4 +7,8 @@
   mitmproxy = {
     description = "mitmproxy interactive HTTPS proxy.";
   };
+  avalonia-ilspy = {
+    gui = true;
+    description = "Avalonia-based ILSpy GUI.";
+  };
 }
