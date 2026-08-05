@@ -2,18 +2,24 @@
   description = "Security tooling: secrets, VPN, network and binary analysis";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    core.url = "github:ryebreadgit/nixos-flake-core";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    core = {
+      url = "github:ryebreadgit/nixos-flake-core";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, ... }: {
-    nixosModules = {
-      security = import ./nixos;
-      default = self.nixosModules.security;
+  outputs =
+    { self, nixpkgs, core }:
+    {
+      nixosModules = rec {
+        security = import ./nixos { coreLib = core.lib; };
+        default = security;
+      };
+
+      homeManagerModules = rec {
+        security = import ./home { coreLib = core.lib; };
+        default = security;
+      };
     };
-    homeManagerModules = {
-      security = import ./home;
-      default = self.homeManagerModules.security;
-    };
-  };
 }
