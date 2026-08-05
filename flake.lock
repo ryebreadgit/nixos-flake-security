@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "core": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785898258,
+        "narHash": "sha256-z7sTeRvdrSm0UP9m0i2y7YtEL6K3UElWue3gMHTQ6d0=",
+        "owner": "ryebreadgit",
+        "repo": "nixos-flake-core",
+        "rev": "10bd215025dc5b1f0187fd4260bba833af63efb9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryebreadgit",
+        "repo": "nixos-flake-core",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1785828668,
+        "narHash": "sha256-8fsyqeO+mJqvIzeO4xIpgJe/f7MTbbVTEC6RT6WSXNs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "core": "core",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
