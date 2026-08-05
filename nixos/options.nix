@@ -32,10 +32,23 @@ in
     };
 
     mullvad = {
-      enable = mkApp { description = "Mullvad VPN client and daemon."; needsGui = true; };
-      package = lib.mkPackageOption pkgs "mullvad-vpn" { };
-      autoConnect = lib.mkOption { type = lib.types.bool; default = false; };
-      lockdown = lib.mkOption { type = lib.types.bool; default = false; };
+      enable = mkApp {
+        description = "Mullvad VPN daemon and CLI.";
+      };
+      gui.enable = mkApp {
+        description = "Mullvad VPN graphical client.";
+        needsGui = true;
+      };
+      autoConnect = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = "Connect on daemon start.";
+      };
+      lockdown = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = "Block all traffic while the tunnel is down.";
+      };
     };
 
     wireshark = {

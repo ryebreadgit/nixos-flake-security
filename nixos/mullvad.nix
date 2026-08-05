@@ -1,13 +1,13 @@
 { lib, config, ... }:
 let
   cfg = config.myConfig.security.mullvad;
-  mullvad = lib.getExe' cfg.package "mullvad";
+  mullvad = lib.getExe' config.services.mullvad-vpn.package "mullvad";
 in
 {
-  config = lib.mkIf cfg.enable {
+  config = lib.mkIf (cfg.enable || cfg.gui.enable) {
     services.mullvad-vpn = {
       enable = true;
-      package = cfg.package;
+      gui.enable = cfg.gui.enable;
     };
 
     systemd.services.mullvad-settings = lib.mkIf (cfg.autoConnect || cfg.lockdown) {
