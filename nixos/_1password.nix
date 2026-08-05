@@ -1,6 +1,6 @@
 { lib, config, ... }:
 let
-  sec = config.myConfig.security;
+  sec = config.ryeConfig.security;
   cfg = sec._1password;
 in
 {
@@ -12,7 +12,7 @@ in
         polkitPolicyOwners = sec.users;
       };
       warnings = lib.optional (sec.users == [ ]) ''
-        myConfig.security._1password is enabled but myConfig.security.users is
+        ryeConfig.security._1password is enabled but ryeConfig.security.users is
         empty; the polkit helper will refuse every unlock request.
       '';
     })

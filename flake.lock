@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785898258,
-        "narHash": "sha256-z7sTeRvdrSm0UP9m0i2y7YtEL6K3UElWue3gMHTQ6d0=",
+        "lastModified": 1785899799,
+        "narHash": "sha256-UpbGgKuA/eq6roO4ph5uS9gk8k+hyL3skjIipsd/Ank=",
         "owner": "ryebreadgit",
         "repo": "nixos-flake-core",
-        "rev": "10bd215025dc5b1f0187fd4260bba833af63efb9",
+        "rev": "5331f7bbff6a2ef759157fa3fa0652b6d11fd4a8",
         "type": "github"
       },
       "original": {

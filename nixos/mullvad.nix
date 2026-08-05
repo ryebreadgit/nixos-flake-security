@@ -1,6 +1,6 @@
 { lib, config, ... }:
 let
-  cfg = config.myConfig.security.mullvad;
+  cfg = config.ryeConfig.security.mullvad;
   mullvad = lib.getExe' config.services.mullvad-vpn.package "mullvad";
 in
 {

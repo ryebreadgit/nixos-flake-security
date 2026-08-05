@@ -1,24 +1,24 @@
 { coreLib }:
 { lib, config, pkgs, ... }:
 let
-  cfg = config.myConfig.security;
+  cfg = config.ryeConfig.security;
   apps = import ../apps.nix;
   common = {
     category = "security";
     categoryCfg = cfg;
-    guiCfg = config.myConfig.gui;
+    guiCfg = config.ryeConfig.gui;
   };
   mkApp = coreLib.mkApp common;
   simple = coreLib.mkSimpleOptions (common // { inherit pkgs apps; });
 in
 {
-  options.myConfig.security = simple // {
+  options.ryeConfig.security = simple // {
     enable = lib.mkEnableOption "security tooling" // { default = true; };
 
     users = lib.mkOption {
       type = lib.types.listOf lib.types.str;
-      default = config.myConfig.users;
-      defaultText = lib.literalExpression "config.myConfig.users";
+      default = config.ryeConfig.users;
+      defaultText = lib.literalExpression "config.ryeConfig.users";
       description = "Accounts granted capture and unlock rights.";
     };
 

@@ -9,7 +9,7 @@ let
         is not supported.
       ''
     else
-      osConfig.myConfig.security;
+      osConfig.ryeConfig.security;
 in
 {
   config = lib.mkMerge [

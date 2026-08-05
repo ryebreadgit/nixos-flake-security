@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 let
-  sec = config.myConfig.security;
+  sec = config.ryeConfig.security;
   cfg = sec.tcpdump;
 in
 {
