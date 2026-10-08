@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 let
   sec = config.ryeConfig.security;
   cfg = sec.ghidra;
@@ -9,6 +14,7 @@ in
     environment.systemPackages = [
       (pkgs.writeShellScriptBin "pyghidra-gui" ''
         export GHIDRA_INSTALL_DIR=${cfg.package}/lib/ghidra
+        export JAVA_HOME=${pkgs.openjdk21.home}
         exec ${python}/bin/python -m pyghidra --gui "$@"
       '')
     ];
