@@ -51,6 +51,15 @@ in
       };
     };
 
+    ghidra = simple.ghidra // {
+      pyghidra.enable = lib.mkOption {
+        type = lib.types.bool;
+        default = cfg.ghidra.enable;
+        defaultText = lib.literalExpression "config.ryeConfig.security.ghidra.enable";
+        description = "`pyghidra-gui` launcher so Ghidra can run Python scripts.";
+      };
+    };
+
     wireshark = {
       enable = mkApp { description = "Wireshark packet analyser (GUI)."; needsGui = true; };
       package = lib.mkPackageOption pkgs "wireshark" { };
