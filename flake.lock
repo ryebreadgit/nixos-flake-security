@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785899799,
-        "narHash": "sha256-UpbGgKuA/eq6roO4ph5uS9gk8k+hyL3skjIipsd/Ank=",
+        "lastModified": 1791497734,
+        "narHash": "sha256-nil4maQepwMFDMeFOJep54tue7SDMHEiVj84bT6roL8=",
         "owner": "ryebreadgit",
         "repo": "nixos-flake-core",
-        "rev": "5331f7bbff6a2ef759157fa3fa0652b6d11fd4a8",
+        "rev": "f267b2c99e627c89d0b1501e3a96f354cda6d0b4",
         "type": "github"
       },
       "original": {
@@ -22,11 +22,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1785828668,
-        "narHash": "sha256-8fsyqeO+mJqvIzeO4xIpgJe/f7MTbbVTEC6RT6WSXNs=",
+        "lastModified": 1791456040,
+        "narHash": "sha256-H83yz/do+hjOO0uujHyH8RgtIQP2v7Mw+cLwcZK/xKc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+        "rev": "e7439b6b14ad3cc35d05608ebca9bce01a25f5f8",
         "type": "github"
       },
       "original": {
